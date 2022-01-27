@@ -7,16 +7,16 @@ from LogTypeHandlers.ErrorLogHandler import ErrorLogHandler
 from LogTypeHandlers.InfoLogHandler import InfoLogHandler
 from LogTypeHandlers.WarnLogHandler import WarnLogHandler
 from LogTypeHandlers.DebugLogHandler import DebugLogHandler
+from LogTypeHandlers.DefaultHandler import DefaultHandler
 
 def get_handlers():
     handlers = []
-    f = FatalLogHandler()
-    e = ErrorLogHandler()
-    handlers.append(f)
-    handlers.append(e)
+    handlers.append(FatalLogHandler())
+    handlers.append(ErrorLogHandler())
     handlers.append(InfoLogHandler())
     handlers.append(WarnLogHandler())
     handlers.append(DebugLogHandler())
+    handlers.append(DefaultHandler())
 
     return handlers
 
